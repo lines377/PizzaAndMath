@@ -150,12 +150,12 @@ public class pizzaAndMathGui extends javax.swing.JFrame {
     private void CalculatorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalculatorActionPerformed
         
         double total, toppingsPrice, pizzaPrice, pizzaSize;
-        DecimalFormat x = new DecimalFormat("$###.##");
+        DecimalFormat x = new DecimalFormat("$###.00");
         pizzaPrice=1.50;
         pizzaSize=Double.parseDouble(SizeImput.getText());
         toppingsPrice=Double.parseDouble(ToppingsInput.getText())*pizzaSize;
         total=pizzaPrice+toppingsPrice;
-        System.out.println(total);
+        priceOutput.setText(x.format(total));
        
         
     }//GEN-LAST:event_CalculatorActionPerformed
